@@ -1,4 +1,3 @@
-import Joi from 'joi';
 import Project from "../models/project";
 import Technology from '../models/technology';
 import { technologySchema } from '../schemas/technology';

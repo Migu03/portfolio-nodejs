@@ -43,8 +43,8 @@ const Feedback = () => {
         <div className="feedback__card">
           <img src="https://i.pinimg.com/564x/84/e5/6f/84e56fa89585cdaff7d828406b957f52.jpg" alt="" className="feedback__img" />
           <div className="feedback__content">
-            <h3 className="feedback__name">Customer A</h3>
-            <p className="feedback__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, placeat?</p>
+            <h3 className="feedback__name">Hua Viet Hoang</h3>
+            <p className="feedback__description">Hay vai l, mai anh cho 10 goi bot canh !!!!</p>
           </div>
         </div>
       </Slider>

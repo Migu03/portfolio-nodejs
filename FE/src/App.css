@@ -2,7 +2,7 @@ ul{
   margin:5px;
 }
 #root{
-  background-color:rgba(0, 0, 0, 0.927);
+  background-color:rgba(18, 18, 18, 0.955);
 }
 :root {
   
@@ -50,7 +50,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-weight: 300;
   color: var(--color-dark);
   line-height: 1.9;
   
@@ -183,7 +182,6 @@ img {
 }
 
 .nav.sticky {
-  position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
 }
 
@@ -555,15 +553,15 @@ transition-delay: 0.75s;
 }
 
 /* SLIDER */
-.slider {
+/* .slider {
   max-width: 100rem;
   height: 50rem;
   margin: 0 auto;
-  position: relative;
+  position: relative; */
 
   /* IN THE END */
-  overflow: hidden;
-}
+  /* overflow: hidden;
+} */
 
 .slide {
   position: absolute;
@@ -1048,9 +1046,10 @@ footer .notice strong {
 }
 /* Login */
 .Login{
-  background-image: url(./images/bg-sheep.png);
+  background-image: url(../src/assets/images/artwork-digital-art.jpg);
+  background-size: cover;
   width: 100%;
-  height: 904px;
+  height: 100%;
   position: absolute;
   font-family: 'Poppins', sans-serif;
 }
@@ -1107,8 +1106,8 @@ footer .notice strong {
 }
 .grap-Login{
   position: relative;
-  width: 600px;
-  min-height: 600px;
+  width: 700px;
+  min-height: 500px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   display: flex;
@@ -1119,9 +1118,11 @@ footer .notice strong {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 6% 35%;
+  margin: 6% 26%;
 }
-
+.form{
+  width: 450px;
+}
 .form h1{
   position: relative;
   color: #fff;
@@ -1141,6 +1142,10 @@ footer .notice strong {
 }
 .form .inputBox{
   width: 100%;
+  margin: 10px;
+}
+.form .inputBox input[type="text"],input[type="password"]{
+  padding: 5px;
 }
 .form .inputBox input{
   width: 100%;
@@ -1148,7 +1153,7 @@ footer .notice strong {
   border: none;
   outline: none;
   border-radius: 35px;  
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -1163,9 +1168,15 @@ footer .notice strong {
 .form .inputBox input[type="submit"]{
   background-color: #fff;
   color:#666;
-  max-width: 70px;
+  max-width: 100px;
   cursor: pointer;
   font-weight: 600;
+  padding:5px;
+}
+.form .inputBox input[type="submit"]:hover{
+  background-color: #3c3c3c;
+  color:#fff;
+  transition: 1s;
 }
 .forget{
   margin-top: 5px;

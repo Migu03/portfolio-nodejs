@@ -3,6 +3,7 @@ import { projectSchema } from "../schemas/project";
 import Category from "../models/category";
 import Technology from "../models/technology";
 // import cloudinary from "../middlewares/cloudinary";
+import slugify from "slugify";
 import { v2 as cloudinary } from "cloudinary";
 
 export const getAll = async (req, res) => {
@@ -55,14 +56,16 @@ export const create = async (req, res) => {
       thumbnail: fileData,
     });
     if (error) {
-      if (fileData) cloudinary.uploader.destroy(fileData.public_id);
+      if (fileData) cloudinary.uploader.destroy(fileData);
       return res.status(400).json({
         message: error.details[0].message,
       });
     }
+    const slug = slugify(body.name, { lower: true, strict: true });
     const data = await Project.create({
       ...body,
       thumbnail: fileData,
+      slug,
     });
     // console.log(fileData)
     await Category.findByIdAndUpdate(data.categoryId, {
@@ -78,7 +81,7 @@ export const create = async (req, res) => {
     });
 
     if (!data) {
-      if (fileData) cloudinary.uploader.destroy(fileData.public_id);
+      if (fileData) cloudinary.uploader.destroy(fileData);
       return res.status(200).json({
         message: "Thêm dự án thất bại",
       });
@@ -88,7 +91,7 @@ export const create = async (req, res) => {
       data,
     });
   } catch (error) {
-    if (fileData) cloudinary.uploader.destroy(fileData.public_id);
+    if (fileData) cloudinary.uploader.destroy(fileData);
     return res.status(400).json({
       message: error.message,
     });
@@ -113,7 +116,8 @@ export const update = async (req, res) => {
   try {
     const id = req.params.id;
     const body = req.body;
-    const data = await Project.findOneAndUpdate({ _id: id }, body, {
+    const slug = slugify(body.name, { lower: true, strict: true });
+    const data = await Project.findOneAndUpdate({ _id: id },{ ...body, slug},{
       new: true,
     });
     await Category.findByIdAndUpdate(data.categoryId, {
