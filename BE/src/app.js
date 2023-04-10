@@ -7,7 +7,7 @@ import projectsRouter from "./routes/projects";
 import categoriesRouter from "./routes/categories";
 import technologiesRouter from "./routes/technologies";
 import userRouter from "./routes/auth";
-import { connectOnlDB, connectLocalDB } from "./config/connect";
+import { connectOnlDB } from "./config/connect";
 
 const app = express();
 const storage = multer.diskStorage({
@@ -37,9 +37,9 @@ app.use("/api", technologiesRouter);
 app.use("/api", userRouter);
 
 // mongodb local
-connectLocalDB();
+// connectLocalDB();
 
 // mongodb onl
-// connectOnlDB();
+connectOnlDB();
 
 export const viteNodeApp = app;
