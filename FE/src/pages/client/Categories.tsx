@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { getCategory } from '../../api/categories';
+import { ICategory } from '../../interface/categories';
+import Projects from './Projects';
 
-type Props = {}
+type Props = {
+  categories: ICategory[];
+};
 
-const Categories = (props: Props) => {
+const Categories = ({categories}: Props) => {
+  const [category, setCategory] = useState<ICategory>();
+  const onClickHandler = async (id: number | string) => {
+    const { data } = await getCategory(id);
+    setCategory(data);
+  };
+  console.log(category)
+
+  // Active categories button
+  const [activeCategory, setActiveCategory] = useState(-1);
   return (
     <section className="section" id="section--2">
         <div className="section__title">
@@ -10,11 +24,22 @@ const Categories = (props: Props) => {
         <h3 className="section__header1">
         Throughout my career as a developer, I have had the opportunity to work on several exciting projects.
         </h3>
-        <ul  id="menu-cate">
-            <li><button data-id="${id}" className="badge badge-sm bg-info text-decoration-none " id="list-cate"></button></li>
-        </ul>
         </div>
+        <ul  id="menu-cate">
+        {categories.map((category: ICategory, index) => {
+          return (
+            <li key={category._id}><button data-id="${id}" className="badge badge-sm bg-info text-decoration-none " onClick={() => {
+              setActiveCategory(index);
+              onClickHandler(category._id);
+            }} id="list-cate">{category.name}</button></li>
+            );
+          })}
+        </ul>
+        <Projects category={category}/>
+        
+        
     </section>
+    
   )
 }
 

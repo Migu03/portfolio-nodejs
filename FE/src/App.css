@@ -4,6 +4,9 @@ ul{
 #root{
   background-color:rgba(18, 18, 18, 0.955);
 }
+h3,h4{
+  color: #fff;
+}
 :root {
   
   --color-primary: #ff86aa;
@@ -432,13 +435,21 @@ transition-delay: 0.75s;
 .features__icon svg {
   height: 2.5rem;
   width: 2.5rem;
-  fill: var(--color-primary);
+  fill: pink;
 }
 
 .features__header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: var(--color-dark);
+  color: #fff;
+  font-weight: 600;
+}
+.text-project a{
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+  margin: 5px;
+  padding: 5px;
 }
 
 /* OPERATIONS */
@@ -543,13 +554,13 @@ transition-delay: 0.75s;
   background-color: var(--color-tertiary-opacity);
 }
 .operations__icon--1 svg {
-  fill: var(--color-secondary-darker);
+  fill: pink;
 }
 .operations__icon--2 svg {
-  fill: var(--color-primary);
+  fill: pink;
 }
 .operations__icon--3 svg {
-  fill: var(--color-tertiary);
+  fill: pink;
 }
 
 /* SLIDER */
@@ -1391,3 +1402,100 @@ ul li i {
   font-size: 20px;
   font-weight:800;
 }
+/* image */
+.image-upload {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-upload label {
+  display: block;
+  padding: 30px 30px;
+}
+i {
+  font-size: large;
+  padding: 2px 0px;
+}
+
+.image-upload input[type="file"] {
+  position: absolute;
+  font-size: 999px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+}
+
+.image-upload:hover {
+  background-color: #ccc;
+}
+
+.image-upload i {
+  margin-right: 10px;
+}
+#preview-image {
+  max-height: 90px;
+  border-radius: 5px;
+}
+
+#logout {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  background: none;
+  color: #fff;
+}
+
+/* image-project */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0;
+  animation: fade-in 0.5s ease forwards;
+}
+
+@keyframes fade-in {
+  from {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  to {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+

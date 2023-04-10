@@ -1,21 +1,12 @@
-import React, { useState } from 'react'
 import axios from 'axios';
-import { IProject } from '../../interface/projects';
 import { ICategory } from '../../interface/categories';
-import { getCategory } from '../../api/categories';
+import { IProject } from '../../interface/projects';
 
 type Props = {
-  projects: IProject[]
-  categories: ICategory[];
+  category?: ICategory;
 };
 
-const Projects = ({projects, categories }: Props) => {
-  const [category, setCategory] = useState<ICategory>();
-  const onClickHandler = async (id: number | string) => {
-    const { data } = await getCategory(id);
-    setCategory(data);
-  };
-
+const Projects = ({category }: Props) => {
   // const username = 'Migu03';
   // const accessToken = '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';
   // const since = '2022-01-01';
@@ -30,28 +21,38 @@ const Projects = ({projects, categories }: Props) => {
   //   .catch(error => {
   //     console.log(error);
   //   });
-  
-
-  return (
-    <div className="project">
-          <a href="">
+  if (category) {
+    const { projects } = category;
+    return (
+      <>
+        {projects?.map((item: IProject) => {
+          return (
+        <div className="project" key={item._id}>
+          <a href={item.link}>
+           <div className="image-container">
             <img
-              src="" className="features__img lazy-img"
-            />
+                src={item.thumbnail} className="features__img lazy-img"
+              />
+              <div className="overlay">
+                <p>Demo</p>
+            </div>
+           </div>
           </a>
             <div className="text-project">
                 <div className="features__icon">
                   <svg>
                   </svg>
                 </div>
-                <h3 className="features__header"></h3>
-                <h4></h4>
-                <p>Completion time:  days</p>
-                <h5>Programmer: </h5>
-                <a href="" className="badge badge-sm bg-info text-decoration-none ">View on github</a>
+                <h3 className="features__header">{item.name}</h3>
+                <h4>{item.description}</h4>
+                <a href={item?.linkGithub} className="badge badge-sm bg-info text-decoration-none ">View on github</a>
             </div>
         </div>
-  )
+      );
+    })}
+  </>
+);
+}else return <></>;
 }
 
 export default Projects
