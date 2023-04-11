@@ -7,6 +7,7 @@ import categoriesRouter from "./routes/categories";
 import technologiesRouter from "./routes/technologies";
 import userRouter from "./routes/auth";
 import { connectOnlDB } from "./config/connect";
+import mongoose from "mongoose";
 
 const app = express();
 dotenv.config();
@@ -20,6 +21,7 @@ app.use("/api", categoriesRouter);
 app.use("/api", technologiesRouter);
 app.use("/api", userRouter);
 
+mongoose.set('strictQuery', false);
 connectOnlDB();
 
 export const viteNodeApp = app;

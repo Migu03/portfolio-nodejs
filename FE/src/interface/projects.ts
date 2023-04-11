@@ -10,4 +10,5 @@ export interface IProject {
   categoryId: {};
   createdAt?: string;
   updateAt?: string;
+  slug?: string;
 }

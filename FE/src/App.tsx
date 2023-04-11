@@ -4,7 +4,7 @@ import AdminLayout from "./components/adminLayout";
 import RootLayout from "./components/rootLayout";
 import { IProject } from "./interface/projects";
 import { ICategory } from "./interface/categories";
-import { removeProject, getAllProjects } from "./api/projects";
+import { removeProject, getAllProjects, getProjectsTrash } from "./api/projects";
 import { getAllCategories, removeCategory } from "./api/categories";
 import CategoriesAdd from "./pages/admin/categories/CategoriesAdd";
 import CategoriesList from "./pages/admin/categories/CategoriesList";
@@ -24,13 +24,14 @@ import UsersAdd from "./pages/admin/users/UsersAdd";
 import UsersEdit from "./pages/admin/users/UsersEdit";
 import ProjectEdit from "./pages/admin/projects/ProjectEdit";
 import Signin from "./signin";
+import ProjectTrash from "./pages/admin/projects/ProjectTrash";
 
 function App() {
   const [projects, setProjects] = useState<IProject[]>([]);
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [technologies, setTechnologies] = useState<ITechnology[]>([]);
   const [users, setUsers] = useState<IUser[]>([]);
-
+  const [projectsTrash,setProjectsTrash] = useState<IProject[]>([])
   useEffect(() => {
     (async () => {
       try {
@@ -42,6 +43,8 @@ function App() {
         setTechnologies(technology.data);
         const user = await getAllUsers();
         setUsers(user.data);
+        const projectsTrash = await getProjectsTrash();
+        setProjectsTrash(projectsTrash.data);
       } catch (error) {
         console.log(error);
       }
@@ -123,6 +126,7 @@ function App() {
             }
           />
           <Route path=":id/edit" element={<ProjectEdit projects={projects}/>}/>
+          <Route path="trash" element={<ProjectTrash projectsTrash={projectsTrash} />}/>
         </Route>
 
         <Route path="categories">

@@ -1,0 +1,42 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+  .projects li {
+    margin: 10px;
+    padding: 10px 10px 10px 40px;
+    background-image: url(../../../assets/images/among-us.png);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.204);
+    transition: all 0.3s ease-in-out;
+  }
+  .projects li:hover h4{
+    color: aquamarine;
+  }
+  .projects li a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .projects li p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    color: #666;
+  }
+  .projects li h4 {
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 10px;
+    color: #fff;
+  }

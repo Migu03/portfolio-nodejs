@@ -1,6 +1,11 @@
 import { array } from 'joi';
 import mongoose from 'mongoose';
-import slugify from 'slugify'
+import mongooseDelete from 'mongoose-delete';
+// import slugify from 'slugify';
+import slug from 'mongoose-slug-generator';
+
+mongoose.plugin(slug);
+
 const projectSchema = mongoose.Schema({
     name: {
         type: String,
@@ -8,6 +13,7 @@ const projectSchema = mongoose.Schema({
     },
     thumbnail: {
         type: String,
+        required: true,
     },
     description: String,
     link: {
@@ -24,20 +30,44 @@ const projectSchema = mongoose.Schema({
     }],
     categoryId: {
         type: mongoose.Types.ObjectId,
-        ref: "Category"
+        ref: "Category",
+        required: true
     },
-    slug: {
-        type: String,
-        unique: true,
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now,
+    },
+    deletedAt: {
+        type: Date,
+        default: null,
+    },
+    deleted: {
+        type: Boolean,
+        default: false,
+    },
+    slug: { 
+        type: String, 
+        slug: "name",
+        unique: true 
     },
 },{timestamps: true, versionKey: false})
 
-// Tạo slug từ trường name
-projectSchema.pre('save', function(next) {
-    this.slug = slugify(this.name, {
-        lower: true,
-        strict: true
-    });
-    next();
-});
+projectSchema.plugin(mongooseDelete, {
+    deletedAt: true,
+    overrideMethods: 'all'
+})
+
+
+// projectSchema.pre("save", function(next) {
+//     this.slug = slugify(this.name, {
+//         lower: true,
+//         strinct: true,
+//     });
+//     next();
+// })
+
 export default mongoose.model('Project', projectSchema);

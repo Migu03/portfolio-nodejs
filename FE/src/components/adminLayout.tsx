@@ -43,6 +43,8 @@ const items: MenuItem[] = [
   getItem("Project", "sub1", <FileOutlined />, "/admin/projects", [
     getItem("List", "2", undefined, "/admin/projects"),
     getItem("Add new", "3", undefined, "/admin/projects/add"),
+    getItem("Trash", "4", undefined, "/admin/projects/trash"),
+
   ]),
   getItem("Categories", "sub2", <CalendarFilled />, "/admin/categories", [
     getItem("List", "4", undefined, "/admin/categories"),
@@ -56,7 +58,6 @@ const items: MenuItem[] = [
     getItem("List", "8", undefined, "/admin/users"),
     getItem("Add new", "9", undefined, "/admin/users/add"),
   ]),
-  getItem("Removed recent", "sub5", <DeleteOutlined />, "/admin"),
 ];
 
 const AdminLayout: React.FC = (props: Props) => {

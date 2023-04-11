@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { getCategory } from '../../api/categories';
 import { ICategory } from '../../interface/categories';
-import Projects from './Projects';
+import ListProject from './list-project/listProject'
 
 type Props = {
   categories: ICategory[];
@@ -35,9 +35,7 @@ const Categories = ({categories}: Props) => {
             );
           })}
         </ul>
-        <Projects category={category}/>
-        
-        
+        <ListProject category={category} />
     </section>
     
   )
