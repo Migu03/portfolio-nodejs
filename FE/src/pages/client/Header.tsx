@@ -1,8 +1,10 @@
 import React from 'react'
 
+
 type Props = {}
 
 const Header = (props: Props) => {
+
     return (
         <header className="header" id="header">
             <nav className="nav">
@@ -12,7 +14,7 @@ const Header = (props: Props) => {
                 </div>
                 <ul className="nav__links">
                     <li className="nav__item" >
-                        <a className="nav__link nav__link--btn btn--show-modal" href="./TRANTHIPHUONGCV.pdf" download="CV- Tran Thi Phuong"
+                        <a className="nav__link nav__link--btn btn--show-modal" href="../../../public/TRAN-THI-PHUONG CV.pdf" download="CV- Tran Thi Phuong"
                         >My Resume</a
                         >
                     </li>

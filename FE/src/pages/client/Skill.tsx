@@ -7,8 +7,7 @@ const Skill = (props: Props) => {
     <div className="section-skill">
         <h2 className="section__description">My Skill</h2>
       <p>
-        I have knowledge of programming languages such as Java, C++, C
-         and software development-related technologies such as HTML, CSS, and JavaScript,...
+      These are the tools, languages, and technologies that I use to make my product everyday
         </p>
         <div className="section-skills">
         <div className="section-skills-item">

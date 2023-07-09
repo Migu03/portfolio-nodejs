@@ -7,6 +7,7 @@ import Infromation from '../pages/client/Infromation'
 import Skill from '../pages/client/Skill'
 import { ICategory } from '../interface/categories'
 import { IProject } from '../interface/projects'
+import Contact from '../pages/client/Contact'
 
 type Props = {
   categories: ICategory[];
@@ -15,14 +16,17 @@ type Props = {
 
 
 const RootLayout = ({ projects, categories }: Props) => {
+  
   return (
-    <div>
-        <Header/>
-        <Infromation/>
-        <Categories categories={categories}/>
-        <Skill/>
-        <Feedback/>
-        <Footer/>
+    <div className='layout'>
+      <div className="follower"></div>
+      <div className="cursor"></div>
+
+      <Header />
+      <Infromation />
+      <Categories categories={categories} />
+      <Skill />
+      <Footer />
     </div>
   )
 }
