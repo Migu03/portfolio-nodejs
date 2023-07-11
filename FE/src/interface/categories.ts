@@ -3,5 +3,5 @@ export interface ICategory {
     name: string;
     projects?: [];
     createdAt?: string;
-  updateAt?: string;
+    updateAt?: string;
 }

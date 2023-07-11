@@ -1,21 +1,20 @@
-import React from 'react'
 import Categories from '../pages/client/Categories'
-import Feedback from '../pages/client/Feedback'
 import Footer from '../pages/client/Footer'
 import Header from '../pages/client/Header'
 import Infromation from '../pages/client/Infromation'
 import Skill from '../pages/client/Skill'
 import { ICategory } from '../interface/categories'
 import { IProject } from '../interface/projects'
-import Contact from '../pages/client/Contact'
+import { ITechnology } from '../interface/technologies'
 
 type Props = {
   categories: ICategory[];
   projects: IProject[];
+  skill: ITechnology[]
 }
 
 
-const RootLayout = ({ projects, categories }: Props) => {
+const RootLayout = ({ projects,skill, categories }: Props) => {
   
   return (
     <div className='layout'>
@@ -25,7 +24,7 @@ const RootLayout = ({ projects, categories }: Props) => {
       <Header />
       <Infromation />
       <Categories categories={categories} />
-      <Skill />
+      <Skill skill={skill}/>
       <Footer />
     </div>
   )

@@ -1504,7 +1504,10 @@ ul li i {
   border-radius: 50%;
   color: #fff;
 }
-
+.social-media{
+  display: flex;
+  justify-content: center;
+}
 .social-media i {
   font-size: 30px;
 }
@@ -1527,8 +1530,8 @@ ul li i {
 
 .project {
   display: grid;
-  grid-template-columns: 4fr 3fr;
-  margin: 20px 20px;
+  grid-template-columns: 3fr 3fr;
+  margin: 40px;
   gap: 10px;
 }
 
@@ -1707,7 +1710,6 @@ i {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -1716,9 +1718,6 @@ i {
   transition: opacity 0.5s ease;
 }
 
-.image-container:hover .overlay {
-  opacity: 1;
-}
 
 .overlay p {
   color: #fff;
@@ -1737,4 +1736,9 @@ i {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.migu{
+  font-size: 30px;
+  font-family: 'Fasthand', cursive;
+  text-shadow: 0 0 1.45rem #f0ee67;
 }

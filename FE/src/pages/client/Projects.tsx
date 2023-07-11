@@ -44,6 +44,7 @@ const Projects = ({category }: Props) => {
                   </svg>
                 </div>
                 <h3 className="features__header">{item.name}</h3>
+                <h4></h4>
                 <h4>{item.description}</h4>
                 <a href={item?.linkGithub} className="badge badge-sm bg-info text-decoration-none ">View on github</a>
             </div>

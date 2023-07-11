@@ -20,8 +20,9 @@ const Footer = (props: Props) => {
         </section>
       </div>
       <div className="text-foot">
+        <h1 className='migu'>Migu</h1>
+        <SocialMedia/>
 
-        Designed and made with 💙 by Migu
       </div>
     </footer>
   )
