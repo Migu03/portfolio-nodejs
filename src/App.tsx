@@ -28,6 +28,7 @@ import ProjectTrash from "./pages/admin/projects/ProjectTrash";
 
 function App() {
   const [projects, setProjects] = useState<IProject[]>([]);
+  const [skill, setSkill] = useState<ITechnology[]>([]);
   const [categories, setCategories] = useState<ICategory[]>([]);
   const [technologies, setTechnologies] = useState<ITechnology[]>([]);
   const [users, setUsers] = useState<IUser[]>([]);
@@ -103,7 +104,7 @@ function App() {
     <Routes>
       <Route
         path="/"
-        element={<RootLayout projects={projects} categories={categories} />}
+        element={<RootLayout projects={projects} categories={categories} skill={skill}/>}
       />
       <Route path="signin" element={<Signin/>} />
 

@@ -152,7 +152,7 @@ const ProjectTrash = ({ projectsTrash }: Props) => {
     },
   ];
 
-const data: DataType[] = projectsTrash?.map((project: IProject) => {
+const data: any = projectsTrash?.map((project: IProject) => {
   return {
     key: project._id,
     ...project,
