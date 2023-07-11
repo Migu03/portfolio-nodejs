@@ -9,7 +9,7 @@ const Header = (props: Props) => {
         <header className="header" id="header">
             <nav className="nav">
                 <div className="nav-left">
-                    <img src="/src/assets/images/logo.png" alt="Bankist logo" className="nav__logo" id="logo"
+                    <img src="/src/assets/images/logo.webp" alt="Bankist logo" className="nav__logo" id="logo"
                         data-version-number="3.0" />
                 </div>
                 <ul className="nav__links">
@@ -24,7 +24,7 @@ const Header = (props: Props) => {
 
             <div className="header__title" >
                     <img
-                        src="./src/assets/images/bannerr.png"
+                        src="./src/assets/images/bannerr.webp"
                         className="header__img"
                         alt="Minimalist bank items"
                     />
