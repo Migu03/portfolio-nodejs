@@ -38,7 +38,7 @@ const Header = (props: Props) => {
                         <span></span>  
                         <span></span> 
                         <span></span> 
-                        View my Porfolio
+                        View my Portfolio
                     </a>
 
             </div>
