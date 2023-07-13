@@ -9,7 +9,7 @@ const Infromation = (props: Props) => {
       <div className="container">
         <div className='infomation'>
           <div className="imagePtran">
-            <img src="./src/assets/images/ImagePtran.webp" alt="Your Image" />
+            <img src="https://scontent.fhan5-10.fna.fbcdn.net/v/t1.15752-9/361092866_936111637483050_285279259948167360_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=ae9488&_nc_ohc=dKaQVcdCEE4AX8_9gJV&_nc_ht=scontent.fhan5-10.fna&oh=03_AdSexIderygYuFdd9cawvOwgGUqAw3VUNbuXLvAQLOhLhA&oe=64D78BE8" alt="Your Image" />
           </div>
           <div className="info">
             <div className="btn-container">

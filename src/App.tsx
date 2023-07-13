@@ -40,6 +40,8 @@ function App() {
         setProjects(project.data);
         const category = await getAllCategories();
         setCategories(category.data);
+        const skill = await getAllTechnologies();
+        setSkill(skill.data);
         const technology = await getAllTechnologies();
         setTechnologies(technology.data);
         const user = await getAllUsers();

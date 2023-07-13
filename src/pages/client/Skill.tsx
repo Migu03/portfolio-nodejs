@@ -5,6 +5,7 @@ type Props = {
 }
 
 const Skill = ({ skill }: Props) => {
+  console.log("skil day:",skill)
   return (
     <div className="section-skill">
       <h2 className="section__description">My Skill</h2>
@@ -14,6 +15,7 @@ const Skill = ({ skill }: Props) => {
       <div className="section-skills">
         <div className="section-skills-item"> 
           {skill?.map((item: ITechnology) => {
+
             return (
               <div className="skills__data" key={item._id}>
                 <i className={`bx bxl-${item.tag}`}></i>

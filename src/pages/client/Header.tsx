@@ -9,7 +9,7 @@ const Header = (props: Props) => {
         <header className="header" id="header">
             <nav className="nav">
                 <div className="nav-left">
-                    <img src="/src/assets/images/logo.webp" alt="Bankist logo" className="nav__logo" id="logo"
+                    <img src="https://cdn.fbsbx.com/v/t59.2708-21/361062290_317238933985625_1359352846535238594_n.gif?_nc_cat=100&ccb=1-7&_nc_sid=041f46&_nc_ohc=vIk2cA85Ev8AX9iSSVR&_nc_ht=cdn.fbsbx.com&oh=03_AdQLfBPTMosxbVnisiP0uNbMrzCyIEgUBHROqWFrd--o-A&oe=64B18730" alt="Bankist logo" className="nav__logo" id="logo"
                         data-version-number="3.0" />
                 </div>
                 <ul className="nav__links">
@@ -24,7 +24,7 @@ const Header = (props: Props) => {
 
             <div className="header__title" >
                     <img
-                        src="./src/assets/images/bannerr.webp"
+                        src="https://cdn.fbsbx.com/v/t59.2708-21/358347019_136999996092365_747756403245556767_n.gif?_nc_cat=110&ccb=1-7&_nc_sid=041f46&_nc_ohc=Lbiev-CFIPUAX9iqXWS&_nc_ht=cdn.fbsbx.com&oh=03_AdQUiYuo5O57BYnrjRx47Pd8Edm3ZliZpXxiJIY9436mIw&oe=64B1B98F"
                         className="header__img"
                         alt="Minimalist bank items"
                     />
