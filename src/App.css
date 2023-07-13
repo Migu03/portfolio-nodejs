@@ -670,7 +670,20 @@ img {
   width: 600px;
   margin-left: 150px;
 }
-
+.skills__data{
+  display: flex;
+  justify-content: center;
+}
+.skills__data i{
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+}
+.section-skills{
+  background-color: rgba(35, 40, 88, 0.616);
+  padding: 10px;
+  border-radius: 30px;
+}
 .operations__icon--1 {
   background-color: var(--color-secondary-opacity);
 }
