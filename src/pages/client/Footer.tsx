@@ -7,7 +7,7 @@ type Props = {}
 const Footer = (props: Props) => {
   return (
     <footer>
-      <div className="footer">
+      <div className="footer" id='contact'>
         <section>
           <ul className="contact-info">
             <li><i className='bx bxs-institution'></i>Address: Xuan Phuong, Nam Tu Liem</li>

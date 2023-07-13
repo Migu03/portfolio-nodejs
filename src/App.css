@@ -272,7 +272,7 @@ img {
   height: 9rem;
   width: 100%;
   padding: 0 6rem;
-  z-index: 900;
+  z-index: 0;
 }
 
 .nav.sticky {
@@ -678,6 +678,10 @@ img {
   font-size: 50px;
   color: rgb(255, 255, 255);
   padding: 10px;
+}
+.skills__data i:hover{
+  transition: 0.7s;
+  color: #000;
 }
 .section-skills{
   background-color: rgba(35, 40, 88, 0.616);

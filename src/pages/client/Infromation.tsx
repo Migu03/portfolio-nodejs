@@ -28,7 +28,7 @@ const Infromation = (props: Props) => {
             </div>
             <p className="section__header"><i className='bx bxs-leaf' style={{ color: '#56e948' }} ></i> I'm Phuong, a 20-year-old web design student at FPT Polytechnic in Hanoi.
               I'm passionate about programming and design, and I aim to create high-quality web products for users.</p>
-              <button className='btn-talk'>Let's collaborate !</button>
+              <a href="#contact"><button className='btn-talk'>Let's collaborate !</button></a>
           </div>
           
         </div>
