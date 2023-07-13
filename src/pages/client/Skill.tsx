@@ -7,7 +7,7 @@ type Props = {
 const Skill = ({ skill }: Props) => {
   console.log("skil day:",skill)
   return (
-    <div className="section-skill">
+    <div className="section-skill" id='skill'>
       <h2 className="section__description">My Skill</h2>
       <p>
         These are the tools, languages, and technologies that I use to make my product everyday
@@ -17,7 +17,8 @@ const Skill = ({ skill }: Props) => {
 
             return (
               <div className="skills__data" key={item._id}>
-                <i className={`bx bxl-${item.tag}`}></i>
+                <a href={`${item.name}`}><i className={`bx bxl-${item.tag}`}></i></a>
+                
               </div>
             )
           })}

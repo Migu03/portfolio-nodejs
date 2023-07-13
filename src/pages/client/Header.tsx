@@ -48,6 +48,7 @@ const Header = (props: Props) => {
                         <a href="#header"><li><i className='bx bxs-home-heart'></i>Home</li></a>
                         <a href="#section--1"><li><i className='bx bxs-graduation'></i>Introduce</li></a>
                         <a href="#section--2"><li><i className='bx bxs-bulb'></i>Projects</li></a>
+                        <a href="#skill"><li><i className='bx bxs-palette'></i>Skill</li></a>
                         <a href="#contact"><li><i className='bx bxs-chat'></i>Contact</li></a>
                     </ul>
                 </nav>
