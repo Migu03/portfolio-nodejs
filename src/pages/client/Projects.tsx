@@ -28,7 +28,7 @@ const Projects = ({category }: Props) => {
         {projects?.map((item: IProject) => {
           return (
         <div className="project" key={item._id}>
-          <a href={item.link}>
+          <a target="_blank" href={item.link}>
            <div className="image-container">
             <img
                 src={item.thumbnail} className="features__img lazy-img"
@@ -46,7 +46,7 @@ const Projects = ({category }: Props) => {
                 <h3 className="features__header">{item.name}</h3>
                 <h4></h4>
                 <h4>{item.description}</h4>
-                <a href={item?.linkGithub} className="badge badge-sm bg-info text-decoration-none ">View on github</a>
+                <a target="_blank" href={item?.linkGithub} className="badge badge-sm bg-info text-decoration-none ">View on github</a>
             </div>
         </div>
       );

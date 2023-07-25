@@ -17,7 +17,7 @@ const Skill = ({ skill }: Props) => {
 
             return (
               <div className="skills__data" key={item._id}>
-                <a href={`${item.name}`}><i className={`bx bxl-${item.tag}`}></i></a>
+                <a target="_blank" href={`${item.name}`}><i className={`bx bxl-${item.tag}`}></i></a>
                 
               </div>
             )
