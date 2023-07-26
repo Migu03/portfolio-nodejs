@@ -14,7 +14,7 @@ const Header = (props: Props) => {
                 </div>
                 <ul className="nav__links">
                     <li className="nav__item" >
-                        <a className="nav__link nav__link--btn btn--show-modal" href="../../../TRAN-THI-PHUONG CV.pdf" download="CV- Tran Thi Phuong"
+                        <a className="nav__link nav__link--btn btn--show-modal" href="../../../TRAN-THI-PHUONG-CV.pdf" download="CV- Tran Thi Phuong"
                         >My Resume</a
                         >
                     </li>
